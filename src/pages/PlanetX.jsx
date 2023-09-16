@@ -20,9 +20,9 @@ const PlanetX = () => {
 
 
 
-      <div className='absolute right-0 p-10 z-50'><Back2/></div>
+      <div className='absolute right-0 p-2 md:p-10 z-50'><Back2/></div>
 
-        <h1 className='my-10 bg-slate-800 p-4 md:text-4xl text-2xl bg-opacity-40 z-10'>Welcome To Planet-X!</h1>
+        <h1 className='my-14 bg-slate-800 p-4 md:text-4xl text-2xl bg-opacity-40 z-10'>Welcome To Planet-X!</h1>
 
             <div className=' absolute left-0 '><Astronaut/></div>
             

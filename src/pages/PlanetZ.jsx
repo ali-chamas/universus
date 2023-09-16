@@ -19,9 +19,9 @@ const PlanetZ = () => {
 
 <div className=' absolute left-0 '><Astronaut/></div>
 
-<div className='absolute right-0 p-10 z-50'><Back2/></div>
+<div className='absolute right-0 p-2 md:p-10 z-50'><Back2/></div>
 
-<h1 className='my-10 bg-slate-800 p-4 md:text-4xl text-2xl bg-opacity-40 z-10'>Welcome To Planet-Y!</h1>
+<h1 className='my-14 bg-slate-800 p-4 md:text-4xl text-2xl bg-opacity-40 z-10'>Welcome To Planet-Y!</h1>
 
 
 <a className=' bg-slate-800 bg-opacity-40 p-12 text-l relative right-[42%] md:right-[44%] lg:right-[46%]  rounded-t-full  rotate-90 cursor-pointer z-10  text-center top-[14%] ' href='/PlanetY'>previous Planet!</a>
