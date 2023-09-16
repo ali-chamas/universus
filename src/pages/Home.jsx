@@ -6,6 +6,8 @@ import Planet3 from '../assets/planet-3.png'
 import space1 from '../assets/space-1.jpg'
 
 import {motion as m} from 'framer-motion'
+import Back from '../components/Back'
+import { transition1 } from '../transition'
 
 
 
@@ -15,18 +17,25 @@ const Home = () => {
   const [id,setId]=useState(0)
 
   const planets=[
-    {id:1,title:'Planet-X',img:Planet1},
-    {id:2,title:'Planet-Y',img:Planet2},
-    {id:3,title:'Planet-Z',img:Planet3},
+    {id:1,title:'PlanetX',img:Planet1},
+    {id:2,title:'PlanetY',img:Planet2},
+    {id:3,title:'PlanetZ',img:Planet3},
   ]
 
   return (
-    <section  className=' flex flex-col items-center' id='planets'>
+    <m.section  className=' flex flex-col items-center ' id='planets'
+    
+   
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={transition1}>
+
+<div className='absolute  top-0 right-0 p-10 '><Back/></div>
 
 
 
-
-<div style={{backgroundImage:`url(${space1})`,backgroundSize:'cover'}} className='absolute md:h-full h-[210vh]  w-screen -z-10'></div>
+<div style={{backgroundImage:`url(${space1})`,backgroundSize:'cover'}} className='absolute  h-[210vh] md:h-full  w-screen -z-10'></div>
 <m.h1 
 
 initial={{opacity:0}}
@@ -46,7 +55,7 @@ className='text-2xl md:text-3xl font-bold mt-20 mb-10 '>Choose a planet to visit
             
             {planets.map((planet,i)=>(
                 <m.a
-                href={`#${planet.title}`}
+                href={`${planet.title}`}
                 whileHover={{scale:1.1,transition:{duration:0.1}}}
                 animate={{rotate:360,transition:{duration:20,ease:'linear',repeat:Infinity}}}
                 whileInView={{opacity:1,transition:{duration:0.5,delay:i*0.6}}}
@@ -74,7 +83,7 @@ className='text-2xl md:text-3xl font-bold mt-20 mb-10 '>Choose a planet to visit
         
       </m.div>
       
-    </section>
+    </m.section>
   )
 }
 
